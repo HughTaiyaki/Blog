@@ -3,11 +3,11 @@
   <title>Taiyaki&#39;s Blog</title>
   
   
-  <link href="https://github.com/HughTaiyaki/Blog/atom.xml" rel="self"/>
+  <link href="https://hughtaiyaki.github.io/Blog/atom.xml" rel="self"/>
   
-  <link href="https://github.com/HughTaiyaki/Blog/"/>
+  <link href="https://hughtaiyaki.github.io/Blog/"/>
   <updated>2024-07-24T05:28:26.799Z</updated>
-  <id>https://github.com/HughTaiyaki/Blog/</id>
+  <id>https://hughtaiyaki.github.io/Blog/</id>
   
   <author>
     <name>Taiyaki</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/HughTaiyaki/Blog/2024/07/24/hello-world/"/>
-    <id>https://github.com/HughTaiyaki/Blog/2024/07/24/hello-world/</id>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/hello-world/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/07/24/hello-world/</id>
     <published>2024-07-24T05:28:26.798Z</published>
     <updated>2024-07-24T05:28:26.799Z</updated>
     
