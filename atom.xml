@@ -6,7 +6,7 @@
   <link href="https://hughtaiyaki.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://hughtaiyaki.github.io/Blog/"/>
-  <updated>2024-07-24T05:28:26.799Z</updated>
+  <updated>2024-07-25T13:34:07.208Z</updated>
   <id>https://hughtaiyaki.github.io/Blog/</id>
   
   <author>
@@ -17,18 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/hello-world/"/>
-    <id>https://hughtaiyaki.github.io/Blog/2024/07/24/hello-world/</id>
+    <title>Hexo使用说明书</title>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/hexo%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/07/24/hexo%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/</id>
     <published>2024-07-24T05:28:26.798Z</published>
-    <updated>2024-07-24T05:28:26.799Z</updated>
+    <updated>2024-07-25T13:34:07.208Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;重新用hexo和github pages搭了个网站，算是迁移之前的旧网站吧。&lt;br&gt;以下是食用说明，防止遗忘。&lt;/p&gt;
+&lt;h2 id=&quot;官方说明&quot;&gt;&lt;a href=&quot;#官方说明&quot; class=&quot;headerlink&quot;</summary>
         
       
     
