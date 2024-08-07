@@ -6,7 +6,7 @@
   <link href="https://hughtaiyaki.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://hughtaiyaki.github.io/Blog/"/>
-  <updated>2024-07-25T13:34:07.208Z</updated>
+  <updated>2024-08-07T21:28:55.435Z</updated>
   <id>https://hughtaiyaki.github.io/Blog/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo使用说明书</title>
-    <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/hexo%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
-    <id>https://hughtaiyaki.github.io/Blog/2024/07/24/hexo%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/</id>
+    <title>晚安世界，你好世界</title>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/08/08/%E6%99%9A%E5%AE%89%E4%B8%96%E7%95%8C%EF%BC%8C%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/08/08/%E6%99%9A%E5%AE%89%E4%B8%96%E7%95%8C%EF%BC%8C%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/</id>
+    <published>2024-08-07T19:22:09.000Z</published>
+    <updated>2024-08-07T21:28:55.435Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;晚安世界，你好世界。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;折腾&quot;&gt;&lt;a href=&quot;#折腾&quot; class=&quot;headerlink&quot; title=&quot;折腾&quot;&gt;&lt;/a&gt;折腾&lt;/h3&gt;&lt;p&gt;刚刚想生成一篇新的文章，发现&lt;code&gt;hexo</summary>
+        
+      
+    
+    
+    
+    
+    <category term="生活" scheme="https://hughtaiyaki.github.io/Blog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始的博客折腾日记（1）</title>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0%EF%BC%881%EF%BC%89/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/07/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0%EF%BC%881%EF%BC%89/</id>
     <published>2024-07-24T05:28:26.798Z</published>
-    <updated>2024-07-25T13:34:07.208Z</updated>
+    <updated>2024-08-07T20:20:16.827Z</updated>
     
     
       
