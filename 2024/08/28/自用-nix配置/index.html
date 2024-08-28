@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>自用*nix配置 · Taiyaki's Blog</title><meta name="description" content="每次都要配环境太麻烦了，此处列出我的常用配置(持续更新中)
+
+
+
+一: 换换换换源
+Ubuntu&amp;#x2F;Debian
+
+sudo vim /etc/apt/sources.list
+
+centos
+
+123sudo wget -O /etc/yum.repos.d/CentOS-Base.rep"><meta name="og:description" content="每次都要配环境太麻烦了，此处列出我的常用配置(持续更新中)
+
+
+
+一: 换换换换源
+Ubuntu&amp;#x2F;Debian
+
+sudo vim /etc/apt/sources.list
+
+centos
+
+123sudo wget -O /etc/yum.repos.d/CentOS-Base.rep"><meta name="twitter:site" content="Taiyaki's Blog"><meta name="twitter:title" content="自用*nix配置"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/Blog/css/bootstrap.min.css"><link rel="stylesheet" href="/Blog/css/font-awesome.min.css"><link rel="stylesheet" href="/Blog/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/Blog/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/Blog/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/Blog/">Hugh Taiyaki</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/Blog/">鲷鱼烧</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/Blog/">首页</a></li><li><a href="/Blog/archives">归档</a></li><li><a href="/Blog/tags">标签</a></li><li><a href="/Blog/about/index.html">关于</a></li><li class="soc"><a href="https://HughTaiyaki.github.io/Blog/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>自用*nix配置</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2024-08-28</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/Blog/2024/08/28/%E8%87%AA%E7%94%A8-nix%E9%85%8D%E7%BD%AE/#comments">评论</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/技术/" title="技术">技术</a><span>&nbsp;</span></span></p><p class="post-abstract"><blockquote>
+<p>每次都要配环境太麻烦了，此处列出我的常用配置(持续更新中)</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="一-换换换"><a href="#一-换换换" class="headerlink" title="一: 换换换"></a>一: 换换换</h3><h4 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h4><ul>
+<li><strong>Ubuntu&#x2F;Debian</strong></li>
+</ul>
+<p><code>sudo vim /etc/apt/sources.list</code></p>
+<ul>
+<li><strong>centos</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">sudo yum clean all</span><br><span class="line">sudo yum makecache</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>macOS</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">替换 brew.git 仓库</span></span><br><span class="line">git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">替换 homebrew-core.git 仓库</span></span><br><span class="line">git -C &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">替换 homebrew-cask.git 仓库（如果有使用 Cask）</span></span><br><span class="line">git -C &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-cask&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git</span><br></pre></td></tr></table></figure>
+
+<h4 id="换shell"><a href="#换shell" class="headerlink" title="换shell"></a>换shell</h4><ul>
+<li><p>Terminal zsh</p>
+<p><code>sudo apt install zsh</code><br><code>git clone https://github.com/robbyrussell/oh-my-zsh.git</code><br><code>cd oh-my-zsh/tools</code><br><code>./install.sh</code></p>
+</li>
+<li><p>更换默认shell<br><code>chsh</code>按步骤来输入zsh地址</p>
+</li>
+<li><p>zsh插件</p>
+<ul>
+<li>自动补全<br><code>git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></li>
+<li>快速跳转<br><code>git clone https://github.com/joelthelion/autojump.git</code><br><code>cd autojump</code><br><code>./install.py</code>按要求把代码填写到~&#x2F;.zshrc文件尾</li>
+<li>配置<br><code>vim ~/.zshrc</code><br>修改60行左右的plugins<code>plugins=(git autojump zsh-suggestions)</code></li>
+<li>修改皮肤<br><code>~/.zshrc</code>中的<code>ZSH_THEME=&quot;robbyrussell&quot;</code>更改</li>
+</ul>
+</li>
+</ul>
+<p>ps: 服务器别乱换</p>
+<h4 id="ssh换端口"><a href="#ssh换端口" class="headerlink" title="ssh换端口"></a>ssh换端口</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br><span class="line">sudo systemctl restart sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="二-实用化配置"><a href="#二-实用化配置" class="headerlink" title="二: 实用化配置"></a>二: 实用化配置</h3><h4 id="On-my-zsh"><a href="#On-my-zsh" class="headerlink" title="On-my-zsh"></a>On-my-zsh</h4><h4 id="vscode远程"><a href="#vscode远程" class="headerlink" title="vscode远程"></a>vscode远程</h4><ul>
+<li>端口转发设为 2355（某些网封了22😠）</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Host jump</span><br><span class="line">  HostName xxx</span><br><span class="line">  User xxx</span><br><span class="line">  Port <span class="number">2355</span></span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">Host target</span><br><span class="line">  HostName xxx</span><br><span class="line">  User xxx</span><br><span class="line">  Port <span class="number">22</span></span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br><span class="line">  ProxyJump jump</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加IdentityFile</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vim ~/.ssh/known_hosts # 删光原来主机的密钥</span><br><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub -p 2355 root@x.x.x.x</span><br></pre></td></tr></table></figure>
+
+<h3 id="三-常用软件"><a href="#三-常用软件" class="headerlink" title="三: 常用软件"></a>三: 常用软件</h3><h4 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h4><ul>
+<li>初始化</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update # 更新</span><br><span class="line">sudo apt install mysql-server</span><br><span class="line">sudo systemctl status mysql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>彻底删除</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove --purge mysql-server mysql-client mysql-common</span><br><span class="line">sudo apt-get autoremove</span><br><span class="line">sudo apt-get autoclean</span><br><span class="line">sudo rm -rf /etc/mysql /var/lib/mysql /var/log/mysql /var/log/mysql.*</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>下载5.27的版本（参考文档更多）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://downloads.mysql.com/archives/get/p/23/file/mysql-server_5.7.29-1ubuntu18.04_amd64.deb-bundle.tar</span><br></pre></td></tr></table></figure>
+
+<p>MySQL :: Download MySQL Community Server (Archived Versions)<br><a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></p>
+<p>解压下载的文件： tar -xvf mysql-server_5.7.29-1ubuntu18.04_amd64.deb-bundle.tar<br>在终端中输入以下命令:（注意，这里是安装顺序。这一步很重要，文件之间存在依赖关系）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i mysql-common_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo dpkg -i libmysqlclient20_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo dpkg -i libmysqlclient-dev_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo dpkg -i libmysqld-dev_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo dpkg -i mysql-community-source_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo dpkg -i mysql-community-client_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo apt-get install libaio1 # 这里发生报错,需要安装 </span><br><span class="line">sudo dpkg -i mysql-community-client_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo apt-get install libaio1 libtinfo5</span><br><span class="line">sudo dpkg -i mysql-client_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo apt-get install libmecab2</span><br><span class="line">sudo dpkg -i mysql-community-server_5.7.29-1ubuntu18.04_amd64.deb</span><br><span class="line">sudo dpkg -i mysql-server_5.7.29-1ubuntu18.04_amd64.deb</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装完成</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动mysql服务:</span></span><br><span class="line">service mysql start</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入MySQL:</span></span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br><span class="line">git config --global user.name &quot;XXX&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h4><p><code>sudo apt install tree</code> </p>
+<h4 id="python"><a href="#python" class="headerlink" title="python"></a>python</h4><p><code>sudo apt install python</code> </p>
+<h4 id="卸载libreoffice-安装-WPS-可选"><a href="#卸载libreoffice-安装-WPS-可选" class="headerlink" title="卸载libreoffice 安装 WPS(可选)"></a>卸载libreoffice 安装 WPS(可选)</h4><p><code>sudo apt remove libreoffice-common</code><br>从<a target="_blank" rel="noopener" href="http://www.wps.cn/product/wpslinux/">http://www.wps.cn/product/wpslinux/</a> 上下载WPS<br><code>sudo dpkg -i wps-office_10.1.0.6757_amd64.deb</code></p>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://HughTaiyaki.github.io/Blog/2024/08/28/自用-nix配置/%20Taiyaki's Blog%20自用*nix配置"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/Blog/2024/08/08/%E6%99%9A%E5%AE%89%E4%B8%96%E7%95%8C%EF%BC%8C%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/" title="晚安世界，你好世界">下一篇: 晚安世界，你好世界&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'httpshughtaiyakigithubioblog';
+var disqus_identifier = '2024/08/28/自用-nix配置/';
+var disqus_title = '自用*nix配置';
+var disqus_url = 'https://HughTaiyaki.github.io/Blog/2024/08/28/自用-nix配置/';
+(function () {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//#{theme.disqus}.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/Blog/js/jquery-3.1.0.min.js"></script><script src="/Blog/js/bootstrap.min.js"></script><script src="/Blog/js/jquery-migrate-1.2.1.min.js"></script><script src="/Blog/js/jquery.appear.js"></script><script src="/Blog/js/google-analytics.js"></script><script src="/Blog/js/typography.js"></script></body></html>
