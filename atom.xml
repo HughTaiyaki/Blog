@@ -6,7 +6,7 @@
   <link href="https://hughtaiyaki.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://hughtaiyaki.github.io/Blog/"/>
-  <updated>2024-09-12T17:15:14.696Z</updated>
+  <updated>2024-09-18T12:35:50.011Z</updated>
   <id>https://hughtaiyaki.github.io/Blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hughtaiyaki.github.io/Blog/2024/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%95%B0%E6%A8%A1%E7%84%B6%E5%90%8Epython/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%95%B0%E6%A8%A1%E7%84%B6%E5%90%8Epython/</id>
     <published>2024-09-11T15:04:28.000Z</published>
-    <updated>2024-09-12T17:15:14.696Z</updated>
+    <updated>2024-09-18T12:35:50.011Z</updated>
     
     
       
@@ -38,7 +38,9 @@
     
     
     
-    <category term="技术 python" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF-python/"/>
+    <category term="技术" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="python" scheme="https://hughtaiyaki.github.io/Blog/tags/python/"/>
     
   </entry>
   
@@ -47,7 +49,7 @@
     <link href="https://hughtaiyaki.github.io/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/</id>
     <published>2024-09-03T08:05:23.000Z</published>
-    <updated>2024-09-09T08:42:18.223Z</updated>
+    <updated>2024-09-18T12:36:03.727Z</updated>
     
     
       
@@ -65,7 +67,9 @@
     
     
     
-    <category term="技术 C++" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF-C/"/>
+    <category term="技术" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="C++" scheme="https://hughtaiyaki.github.io/Blog/tags/C/"/>
     
   </entry>
   
@@ -112,7 +116,7 @@
     <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0%EF%BC%881%EF%BC%89/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/07/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0%EF%BC%881%EF%BC%89/</id>
     <published>2024-07-24T05:28:26.798Z</published>
-    <updated>2024-08-28T06:30:37.694Z</updated>
+    <updated>2024-09-18T09:57:33.808Z</updated>
     
     
       
