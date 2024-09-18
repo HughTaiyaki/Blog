@@ -6,7 +6,7 @@
   <link href="https://hughtaiyaki.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://hughtaiyaki.github.io/Blog/"/>
-  <updated>2024-08-28T06:19:26.951Z</updated>
+  <updated>2024-09-12T17:15:14.696Z</updated>
   <id>https://hughtaiyaki.github.io/Blog/</id>
   
   <author>
@@ -17,11 +17,64 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记一次数模然后python</title>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%95%B0%E6%A8%A1%E7%84%B6%E5%90%8Epython/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%95%B0%E6%A8%A1%E7%84%B6%E5%90%8Epython/</id>
+    <published>2024-09-11T15:04:28.000Z</published>
+    <updated>2024-09-12T17:15:14.696Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;9.6 - 9.8号体验了下数模，很累的一个比赛。作为一个编程手主要任务就是把建模手的需求转换成代码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;我学到了什么？&quot;&gt;&lt;a href=&quot;#我学到了什么？&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术 python" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF-python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速入门C++写题</title>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/</id>
+    <published>2024-09-03T08:05:23.000Z</published>
+    <updated>2024-09-09T08:42:18.223Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。&lt;/p&gt;
+&lt;p&gt;而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。&lt;/p&gt;
+&lt;p&gt;所以我记录下常用的技巧方便查阅。&lt;/p&gt;
+&lt;/blockq</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术 C++" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF-C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自用*nix配置</title>
     <link href="https://hughtaiyaki.github.io/Blog/2024/08/28/%E8%87%AA%E7%94%A8-nix%E9%85%8D%E7%BD%AE/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/08/28/%E8%87%AA%E7%94%A8-nix%E9%85%8D%E7%BD%AE/</id>
     <published>2024-08-28T06:05:57.000Z</published>
-    <updated>2024-08-28T06:19:26.951Z</updated>
+    <updated>2024-08-28T06:29:34.721Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -40,7 +93,7 @@
     <link href="https://hughtaiyaki.github.io/Blog/2024/08/08/%E6%99%9A%E5%AE%89%E4%B8%96%E7%95%8C%EF%BC%8C%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/08/08/%E6%99%9A%E5%AE%89%E4%B8%96%E7%95%8C%EF%BC%8C%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/</id>
     <published>2024-08-07T19:22:09.000Z</published>
-    <updated>2024-08-28T06:20:41.650Z</updated>
+    <updated>2024-08-28T06:29:20.258Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -59,12 +112,19 @@
     <link href="https://hughtaiyaki.github.io/Blog/2024/07/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0%EF%BC%881%EF%BC%89/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/07/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0%EF%BC%881%EF%BC%89/</id>
     <published>2024-07-24T05:28:26.798Z</published>
-    <updated>2024-08-28T06:20:59.502Z</updated>
+    <updated>2024-08-28T06:30:37.694Z</updated>
     
     
+      
+      
+        
+        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;重新用hexo和github pages搭了个网站，算是迁移之前的旧网站吧。&lt;br&gt;以下是食用说明，防止遗忘。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;官方说明&quot;&gt;&lt;a href=&quot;#官方说明&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
