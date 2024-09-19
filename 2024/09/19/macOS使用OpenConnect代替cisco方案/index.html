@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>macOS使用OpenConnect代替cisco方案 · Taiyaki's Blog</title><meta name="description" content="某个护网需要连到内网，然后他丢的思科的vpn安装包不支持arm架构，还污染了环境，有些库被mac的安全防护报错了。
+看了几眼日志就跑去上课了，然后刚用它的sh脚本卸载干净。
+摸鱼的时候发现可以用openConnect代替使用。
+
+安装过程
+安装服务
+1brew install openconnect"><meta name="og:description" content="某个护网需要连到内网，然后他丢的思科的vpn安装包不支持arm架构，还污染了环境，有些库被mac的安全防护报错了。
+看了几眼日志就跑去上课了，然后刚用它的sh脚本卸载干净。
+摸鱼的时候发现可以用openConnect代替使用。
+
+安装过程
+安装服务
+1brew install openconnect"><meta name="twitter:site" content="Taiyaki's Blog"><meta name="twitter:title" content="macOS使用OpenConnect代替cisco方案"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/Blog/css/bootstrap.min.css"><link rel="stylesheet" href="/Blog/css/font-awesome.min.css"><link rel="stylesheet" href="/Blog/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 引入 highlight.js 样式--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"><!-- 引入 highlight.js 脚本--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><!-- 启动代码高亮--><script>hljs.highlightAll();</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/Blog/">Hugh Taiyaki</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/Blog/">鲷鱼烧</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/Blog/">首页</a></li><li><a href="/Blog/archives">归档</a></li><li><a href="/Blog/tags">标签</a></li><li><a href="/Blog/about/index.html">关于</a></li><li class="soc"><a href="https://HughTaiyaki.github.io/Blog/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>macOS使用OpenConnect代替cisco方案</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2024-09-19</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/Blog/2024/09/19/macOS%E4%BD%BF%E7%94%A8OpenConnect%E4%BB%A3%E6%9B%BFcisco%E6%96%B9%E6%A1%88/#comments">评论</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/技术/" title="技术">技术</a><span>&nbsp;</span></span></p><p class="post-abstract"><blockquote>
+<p>某个护网需要连到内网，然后他丢的思科的vpn安装包不支持arm架构，还污染了环境，有些库被mac的安全防护报错了。</p>
+<p>看了几眼日志就跑去上课了，然后刚用它的sh脚本卸载干净。</p>
+<p>摸鱼的时候发现可以用openConnect代替使用。</p>
+</blockquote>
+<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ul>
+<li><p>安装服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install openconnect</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>连VPN</p>
+<p><code>sudo openconnect -u VPN用户名 连接地址</code></p>
+</li>
+<li><p>给环境变量重写个快捷键</p>
+<p>我用的是zsh就看一眼<code>cat .zshrc</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function vpn-start &#123;</span><br><span class="line">  local username=$1</span><br><span class="line">  local address=$2</span><br><span class="line">  sudo openconnect -u &quot;$username&quot; &quot;$address&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function vpn-stop &#123;</span><br><span class="line">  sudo pkill openconnect</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function vpn-status &#123;</span><br><span class="line">  pgrep openconnect &gt; /dev/null &amp;&amp; echo &quot;VPN is running&quot; || echo &quot;VPN is stopped&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>更新shell配置文件<code>source ~/.zshrc</code>  </p>
+<p>启动：<code>vpn-start 用户名 地址</code></p>
+<p>停止：<code>vpn-stop</code></p>
+<p>状态：<code>vpn-status</code></p>
+</li>
+</ul>
+<h3 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h3><p>然后得到了 CONNECT 响应：HTTP&#x2F;1.1 200 CONNECTED。但是DTLS 握手失败：资源临时不可用，请重试。这个其实就是tcp成功了，upd失败了。这种网页平台提交表单、上传文件、发送数据这种也用不到udp，就是用<strong>TLS&#x2F;HTTPS</strong> 协议来进行安全传输。</p>
+<p><strong>PS: 传输层协议</strong></p>
+<p>​	•<strong>TLS（Transport Layer Security）</strong>: 基于 <strong>TCP</strong> 协议。TCP 是一种面向连接的协议，它保证了数据包的顺序性和可靠性。TLS 主要用于 <strong>HTTPS</strong> 连接，用来确保数据在传输中的保密性和完整性。</p>
+<p>​	•<strong>DTLS（Datagram Transport Layer Security）</strong>: 基于 <strong>UDP</strong> 协议。UDP 是一种无连接的协议，不保证数据包的顺序和可靠性。DTLS 在设计上与 TLS 类似，但它能够适应不可靠的网络传输，适用于实时应用，如 <strong>VoIP</strong>、视频会议或在线游戏。</p>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://HughTaiyaki.github.io/Blog/2024/09/19/macOS使用OpenConnect代替cisco方案/%20Taiyaki's Blog%20macOS使用OpenConnect代替cisco方案"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/Blog/2024/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%95%B0%E6%A8%A1%E7%84%B6%E5%90%8Epython/" title="记一次数模然后python">下一篇: 记一次数模然后python&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'httpshughtaiyakigithubioblog';
+var disqus_identifier = '2024/09/19/macOS使用OpenConnect代替cisco方案/';
+var disqus_title = 'macOS使用OpenConnect代替cisco方案';
+var disqus_url = 'https://HughTaiyaki.github.io/Blog/2024/09/19/macOS使用OpenConnect代替cisco方案/';
+(function () {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//#{theme.disqus}.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/Blog/js/jquery-3.1.0.min.js"></script><script src="/Blog/js/bootstrap.min.js"></script><script src="/Blog/js/jquery-migrate-1.2.1.min.js"></script><script src="/Blog/js/jquery.appear.js"></script><script src="/Blog/js/google-analytics.js"></script><script src="/Blog/js/typography.js"></script></body></html>

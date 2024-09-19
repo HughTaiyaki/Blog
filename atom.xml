@@ -6,7 +6,7 @@
   <link href="https://hughtaiyaki.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://hughtaiyaki.github.io/Blog/"/>
-  <updated>2024-09-18T12:35:50.011Z</updated>
+  <updated>2024-09-19T07:17:25.816Z</updated>
   <id>https://hughtaiyaki.github.io/Blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS使用OpenConnect代替cisco方案</title>
+    <link href="https://hughtaiyaki.github.io/Blog/2024/09/19/macOS%E4%BD%BF%E7%94%A8OpenConnect%E4%BB%A3%E6%9B%BFcisco%E6%96%B9%E6%A1%88/"/>
+    <id>https://hughtaiyaki.github.io/Blog/2024/09/19/macOS%E4%BD%BF%E7%94%A8OpenConnect%E4%BB%A3%E6%9B%BFcisco%E6%96%B9%E6%A1%88/</id>
+    <published>2024-09-19T05:49:19.000Z</published>
+    <updated>2024-09-19T07:17:25.816Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;某个护网需要连到内网，然后他丢的思科的vpn安装包不支持arm架构，还污染了环境，有些库被mac的安全防护报错了。&lt;/p&gt;
+&lt;p&gt;看了几眼日志就跑去上课了，然后刚用它的sh脚本卸载干净。&lt;/p&gt;
+&lt;p&gt;摸鱼的时候发现可以用openConnect代替</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://hughtaiyaki.github.io/Blog/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次数模然后python</title>
