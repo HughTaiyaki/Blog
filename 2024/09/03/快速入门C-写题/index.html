@@ -1,7 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>快速入门C++写题 · Taiyaki's Blog</title><meta name="description" content="面向c++写题"><meta name="og:description" content="面向c++写题"><meta name="twitter:site" content="Taiyaki's Blog"><meta name="twitter:title" content="快速入门C++写题"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/Blog/css/bootstrap.min.css"><link rel="stylesheet" href="/Blog/css/font-awesome.min.css"><link rel="stylesheet" href="/Blog/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 引入 highlight.js 样式--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"><!-- 引入 highlight.js 脚本--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><!-- 启动代码高亮--><script>hljs.highlightAll();</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/Blog/">Hugh Taiyaki</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/Blog/">鲷鱼烧</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/Blog/">首页</a></li><li><a href="/Blog/archives">归档</a></li><li><a href="/Blog/tags">标签</a></li><li><a href="/Blog/about/index.html">关于</a></li><li class="soc"><a href="https://HughTaiyaki.github.io/Blog/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>快速入门C++写题</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2024-09-03</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/#comments">评论</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/C/" title="C++">C++</a><span>&nbsp;</span></span></p><p class="post-abstract"><blockquote>
-<p>以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。</p>
-<p>而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。</p>
-<p>所以我记录下常用的技巧方便查阅。</p>
+<p>以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。</p>
+<p>下面是C++相比较C语言的一些比较好用的新特性。</p>
 </blockquote>
 <h2 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h2><h3 id="1-1-引用"><a href="#1-1-引用" class="headerlink" title="1.1 引用"></a>1.1 引用</h3><p>在C语言中，符号<code>&amp;</code> 是取地址符。而在C++中，<code>&amp;</code> 有一个新的作用：定义引用变量。引用就是某一个变量的别名。<strong>引用必须在声明的同时进行初始化，并且一旦初始化后就不能再指向其他对象。</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">42</span>;</span><br><span class="line"><span class="type">int</span>&amp; ref = num; <span class="comment">// 使用 &amp; 声明一个引用 ref，ref 是 num 的别名</span></span><br><span class="line">ref = <span class="number">50</span>; <span class="comment">// 修改 ref 的值，也会改变 num 的值</span></span><br></pre></td></tr></table></figure>
@@ -72,10 +71,88 @@
 
 <p>这个函数就能用于<code>vector&lt;vector&lt;int&gt;&gt;</code> 的排序，比如 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">56.合并区间</a>  <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">452. 用最少数量的箭引爆气球</a> </p>
 <p>常用的标准库<code>std::sort</code>实现保证复杂度是$O(n\log{n})$  ,结合了快速排序、堆排序和插入排序，能够在最坏情况下保证$O(n \log n)$的时间复杂度。如果递归深度超过一个特定的阈值（通常是$2 \log n$），为了避免快速排序的最坏情况$O(n^2)$，<code>std::sort</code> 切换到堆排序，这样就能保证最坏情况下的时间复杂度是$O(n \log n)$。对于非常小的数组或者递归到足够小的子数组时(通常是小于16个元素)<code>std::sort</code>会使用插入排序，因为在小规模数据集上，插入排序的常数时间复杂度较低。</p>
-<h4 id="2-2-upper-bound-lower-bound-binary-search-equal-range"><a href="#2-2-upper-bound-lower-bound-binary-search-equal-range" class="headerlink" title="2.2 upper_bound &amp; lower_bound &amp; binary_search &amp; equal_range"></a>2.2 upper_bound &amp; lower_bound &amp; binary_search &amp; equal_range</h4><h4 id="2-3-unique"><a href="#2-3-unique" class="headerlink" title="2.3 unique"></a>2.3 unique</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span>(alls.<span class="built_in">begin</span>(),alls.<span class="built_in">end</span>());</span><br><span class="line">alls.<span class="built_in">erase</span>(<span class="built_in">unique</span>(alls.<span class="built_in">begin</span>(),alls.<span class="built_in">end</span>()), alls.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-upper-bound-lower-bound-binary-search"><a href="#2-2-upper-bound-lower-bound-binary-search" class="headerlink" title="2.2 upper_bound &amp; lower_bound | binary_search"></a>2.2 upper_bound &amp; lower_bound | binary_search</h4><blockquote>
+<p><code>include &lt;algorithm&gt;</code></p>
+</blockquote>
+<p>用于<strong>有序数组</strong>的二分! 可以指定比较函数</p>
+<ul>
+<li><p><code>auto u = upper_bound(s.begin(), s.end(), i)</code></p>
+<p>返回第一个<strong>严格大于</strong><code>i</code>的元素的迭代器（和指针差不多，可以用<code>*u</code>获取其值)；如果没找到，返回第二个参数<code>s.end()</code></p>
+</li>
+<li><p><code>auto u = lower_bound(s.begin(), s.end(), i)</code></p>
+<p>返回第一个<strong>大于等于</strong><code>i</code>的元素的迭代器；如果没找到，返回第二个参数，即<code>data.end()</code></p>
+<p>这是一个比较函数的例子，告诉函数怎么向右找，假如我们有一个自定义结构</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">PriceInfo</span> &#123;</span><br><span class="line">    <span class="type">double</span> price;</span><br><span class="line">    string name;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-4-gcd-lcm-C-17"><a href="#2-4-gcd-lcm-C-17" class="headerlink" title="2.4 gcd &amp; lcm C++17"></a>2.4 gcd &amp; lcm <code>C++17</code></h4><h4 id="2-5-其他"><a href="#2-5-其他" class="headerlink" title="2.5 其他"></a>2.5 其他</h4><hr>
-<h3 id="3-数据结构"><a href="#3-数据结构" class="headerlink" title="3. 数据结构"></a>3. 数据结构</h3><blockquote>
+<p>我们可以这样这样比较不同的元素（容器中的 PriceInfo 和查找的 double 类型）</p>
+<p><code>auto prc_info = lower_bound(prices.begin(), prices.end()), i, [](const PriceInfo&amp; info, double value)&#123;return info.price &lt; value;&#125;);</code></p>
+</li>
+<li><p><code>binary_search (v.begin(), v.end(), i)</code> </p>
+<p>返回一个bool，表示<code>i</code>是否在<code>v</code>中。</p>
+</li>
+</ul>
+<h4 id="2-3-unique"><a href="#2-3-unique" class="headerlink" title="2.3 unique"></a>2.3 unique</h4><blockquote>
+<p><code>include &lt;algorithm&gt;</code></p>
+</blockquote>
+<p>一般用来配合排序去重，因为这个是去掉<strong>连续的重复元素</strong>。</p>
+<p>下面是完全去重操作</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span>(alls.<span class="built_in">begin</span>(),alls.<span class="built_in">end</span>());</span><br><span class="line">alls.<span class="built_in">erase</span>(<span class="built_in">unique</span>(alls.<span class="built_in">begin</span>(),alls.<span class="built_in">end</span>()), alls.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4-gcd-lcm-C-17"><a href="#2-4-gcd-lcm-C-17" class="headerlink" title="2.4 gcd &amp; lcm C++17"></a>2.4 gcd &amp; lcm <code>C++17</code></h4><blockquote>
+<p><code>#include &lt;numeric&gt;</code> </p>
+</blockquote>
+<p>这个是<code>C++17</code>才加上的特性，经常记不住辗转相除法怎么写</p>
+<p><code>cout &lt;&lt; gcd(18, 12) &lt;&lt; &quot; &quot; &lt;&lt; lcm(18,12) &lt;&lt; endl;</code></p>
+<p>输出是<code>6 36</code> </p>
+<h4 id="2-5-其他"><a href="#2-5-其他" class="headerlink" title="2.5 其他"></a>2.5 其他</h4><hr>
+<h3 id="3-数据结构有关的"><a href="#3-数据结构有关的" class="headerlink" title="3. 数据结构有关的"></a>3. 数据结构有关的</h3><h4 id="3-1-图的邻接矩阵和邻接表实现"><a href="#3-1-图的邻接矩阵和邻接表实现" class="headerlink" title="3.1 图的邻接矩阵和邻接表实现"></a>3.1 图的邻接矩阵和邻接表实现</h4><p>有一颗树或者图，它给定的边是<br><em><strong>1 2</strong></em><br><em><strong>1 3</strong></em><br><em><strong>2 4</strong></em><br><em><strong>3 5</strong></em></p>
+<p>邻接表表示是：</p>
+<p><em><strong>1: 2, 3</strong></em><br><em><strong>2: 1, 4</strong></em><br><em><strong>3: 1, 5</strong></em><br><em><strong>4: 2</strong></em><br><em><strong>5: 3</strong></em></p>
+<p>如果想要用<strong>邻接表</strong>来存<strong>稀疏图</strong>，用C实现的话就要写一个<code>add(int a,int b)</code>来静态建图&amp;树，其实就是链式前向星。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> head[N],next[N * <span class="number">2</span>],e[N * <span class="number">2</span>],idx;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">	e[idx] = b,next[idx] = head[a],head[a] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">add</span>(a,b),<span class="built_in">add</span>(b,a);</span><br></pre></td></tr></table></figure>
+
+<p><code>C++</code>有了<code>vector</code>这个容器后，我们可以更优雅地建图&amp;树</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; graph[N];</span><br><span class="line">graph[a].<span class="built_in">push_back</span>(b) <span class="comment">// 邻接表的节点 a 的邻接链表中添加节点 b</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-栈和队列"><a href="#3-2-栈和队列" class="headerlink" title="3.2 栈和队列"></a>3.2 栈和队列</h4><h4 id="3-3-优先队列"><a href="#3-3-优先队列" class="headerlink" title="3.3 优先队列"></a>3.3 优先队列</h4><blockquote>
+<p><code>include &lt;queue&gt;</code></p>
+</blockquote>
+<p>优先队列能用来实现堆</p>
+<ul>
+<li><p>构造</p>
+<ul>
+<li><p><code>priority_queue&lt;int&gt; q</code> 默认是最大堆</p>
+</li>
+<li><p><code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; q</code>最小堆</p>
+</li>
+<li><p>自定义比较函数，以下是一个最小堆堆例子：</p>
+<p>存int类型，vector<int>是底层容器来存元素，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> cmp = [](<span class="type">const</span> <span class="type">int</span> &amp;a,<span class="type">const</span> <span class="type">int</span> &amp;b) &#123;<span class="keyword">return</span> a &gt; b;&#125;;</span><br><span class="line">priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;,<span class="keyword">decltype</span>(cmp) &gt; <span class="built_in">q</span>(cmp);</span><br></pre></td></tr></table></figure>
+
+<p><code>decltype</code>和<code>auto</code>类似，但是<code>auto</code>是根据初始化表达式来推导类型，<code>decltype</code>是根据任意表达式推导类型，不依赖初始化</p>
+</li>
+<li><p>还可以用已有的数组初始化优先队列</p>
+<ul>
+<li><code>priority_queue&lt;int&gt; q1(v.begin(),v.end());</code> </li>
+<li><code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; q2(v.begin(), v.end());</code></li>
+<li><code>priority_queue&lt;int, vector&lt;int&gt;, decltype(cmp)&gt; q3(v.begin(), v.end(), cmp);</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>入队：<code>q.push(2)</code></p>
+</li>
+<li><p>出队: <code>q.pop()</code></p>
+</li>
+<li><p>入队和出队的复杂度是$O(\log{N})$</p>
+</li>
+<li><p>访问堆头元素 <code>q.top()</code></p>
+</li>
+</ul>
+<h4 id="3-4-set-map-｜multiset-multimap"><a href="#3-4-set-map-｜multiset-multimap" class="headerlink" title="3.4 set &amp; map ｜multiset &amp; multimap"></a>3.4 set &amp; map ｜multiset &amp; multimap</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::set <span class="comment">// 是唯一的，有序的集合，用红黑树实现 </span></span><br><span class="line">std::map <span class="comment">// 是键值对的集合，键唯一、有序，用红黑树实现</span></span><br><span class="line"><span class="comment">// 下面是他们的可以重复的版本</span></span><br><span class="line">std::multiset </span><br><span class="line">std::multimap</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-5-unordered-set-unordered-map"><a href="#3-5-unordered-set-unordered-map" class="headerlink" title="3.5 unordered_set &amp; unordered_map"></a>3.5 unordered_set &amp; unordered_map</h4><p>这两个版本是<code>std::set</code>和<code>std::map</code>的无序版本，即键不经过排序，这里用哈希实现。</p>
+<blockquote>
 <p>声明: 本文中的大部分内容引用自 <a target="_blank" rel="noopener" href="https://xuan-insr.github.io/cpp/cpp_for_contests/#1-%E5%9F%BA%E7%A1%80">咸鱼暄的笔记</a>，仅供学习和交流使用，版权归原作者所有。如有侵权，请联系删除。</p>
 </blockquote>
 </p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://HughTaiyaki.github.io/Blog/2024/09/03/快速入门C-写题/%20Taiyaki's Blog%20快速入门C++写题"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/Blog/2024/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%95%B0%E6%A8%A1%E7%84%B6%E5%90%8Epython/" title="记一次数模然后python"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: 记一次数模然后python</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/Blog/2024/08/28/%E8%87%AA%E7%94%A8-nix%E9%85%8D%E7%BD%AE/" title="自用*nix配置">下一篇: 自用*nix配置&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'httpshughtaiyakigithubioblog';

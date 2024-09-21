@@ -75,7 +75,7 @@
     <link href="https://hughtaiyaki.github.io/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/"/>
     <id>https://hughtaiyaki.github.io/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/</id>
     <published>2024-09-03T08:05:23.000Z</published>
-    <updated>2024-09-18T12:36:03.727Z</updated>
+    <updated>2024-09-21T08:18:01.265Z</updated>
     
     
       
@@ -83,9 +83,8 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。&lt;/p&gt;
-&lt;p&gt;而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。&lt;/p&gt;
-&lt;p&gt;所以我记录下常用的技巧方便查阅。&lt;/p&gt;
+&lt;p&gt;以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。&lt;/p&gt;
+&lt;p&gt;下面是C++相比较C语言的一些比较好用的新特性。&lt;/p&gt;
 &lt;/blockq</summary>
         
       
