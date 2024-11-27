@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>快速入门C++写题 · Taiyaki's Blog</title><meta name="description" content="面向c++写题"><meta name="og:description" content="面向c++写题"><meta name="twitter:site" content="Taiyaki's Blog"><meta name="twitter:title" content="快速入门C++写题"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/Blog/css/bootstrap.min.css"><link rel="stylesheet" href="/Blog/css/font-awesome.min.css"><link rel="stylesheet" href="/Blog/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 引入 highlight.js 样式--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"><!-- 引入 highlight.js 脚本--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><!-- 启动代码高亮--><script>hljs.highlightAll();</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/Blog/">Hugh Taiyaki</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/Blog/">鲷鱼烧</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/Blog/">首页</a></li><li><a href="/Blog/archives">归档</a></li><li><a href="/Blog/tags">标签</a></li><li><a href="/Blog/about/index.html">关于</a></li><li class="soc"><a href="https://HughTaiyaki.github.io/Blog/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>快速入门C++写题</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2024-09-03</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/#comments">评论</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/C/" title="C++">C++</a><span>&nbsp;</span></span></p><p class="post-abstract"><blockquote>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>快速入门C++写题 · Taiyaki's Blog</title><meta name="description" content="面向c++写题"><meta name="og:description" content="面向c++写题"><meta name="twitter:site" content="Taiyaki's Blog"><meta name="twitter:title" content="快速入门C++写题"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/Blog/css/bootstrap.min.css"><link rel="stylesheet" href="/Blog/css/font-awesome.min.css"><link rel="stylesheet" href="/Blog/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 引入 highlight.js 样式--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"><!-- 引入 highlight.js 脚本--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><link rel="stylesheet" href="/Blog/css/prism.css"><Prism class="highlightAll"></Prism><meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/Blog/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/Blog/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/Blog/">Hugh Taiyaki</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/Blog/">鲷鱼烧</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/Blog/">首页</a></li><li><a href="/Blog/archives">归档</a></li><li><a href="/Blog/tags">标签</a></li><li><a href="/Blog/about/index.html">关于</a></li><li class="soc"><a href="https://HughTaiyaki.github.io/Blog/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>快速入门C++写题</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2024-09-03</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/Blog/2024/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8C-%E5%86%99%E9%A2%98/#comments">评论</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/C/" title="C++">C++</a><span>&nbsp;</span></span></p><p class="post-abstract"><blockquote>
 <p>以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。</p>
 <p>下面是C++相比较C语言的一些比较好用的新特性。</p>
 </blockquote>
@@ -33,17 +34,18 @@
 <p><code>#include &lt;string&gt;</code> </p>
 </blockquote>
 <p>string是C++里的字符串。实现和C的字符数组一样，也是以<code>\0</code>标识结束</p>
-<p><strong>创建</strong> <code>string s</code> or <code>string s = &quot;123&quot;</code></p>
+<p><strong>构造</strong> <code>string s</code> or <code>string s = &quot;123&quot;</code></p>
 <p><strong>获取长度</strong> <code>s.length()</code> or <code>s.size()</code> 但长度不包含末尾的<code>\0</code></p>
 <p><strong>拼接</strong> <code>s1 + s2</code> or <code>s + &#39;a&#39;</code> </p>
 <p><strong>访问</strong> <code>s[i]</code></p>
 <p><strong>遍历</strong> <code>for (auto c : s)</code></p>
 <p><strong>比较</strong> 可以用<code>==</code>,<code>!=</code> <code>&gt;</code> 等比较运算符按字典序比较2个字符串 </p>
+<p><strong>获得子串</strong>通过成员函数<code>substr(pos,n)</code>，从pos开始往后拷贝n个字符，return一个string</p>
 <h4 id="1-2-3-pair"><a href="#1-2-3-pair" class="headerlink" title="1.2.3 pair"></a>1.2.3 pair</h4><blockquote>
 <p><code>#include &lt;utility&gt;</code></p>
 </blockquote>
 <p>pair可以把两个不同的类型放到一起操作。</p>
-<p><strong>创建</strong> <code>pair&lt;int, int&gt; p1;</code> <code>pair&lt;int, string&gt; p2;</code></p>
+<p><strong>构造</strong> <code>pair&lt;int, int&gt; p1;</code> <code>pair&lt;int, string&gt; p2;</code></p>
 <p><strong>访问</strong> <code>p1.first</code>、<code>p1.second</code> 的方法访问其成员。</p>
 <p><strong>比较</strong> pair默认比较方法是先按照第一个字段比较，相同再按第二个字段比较</p>
 <hr>
@@ -104,7 +106,13 @@
 <p>这个是<code>C++17</code>才加上的特性，经常记不住辗转相除法怎么写</p>
 <p><code>cout &lt;&lt; gcd(18, 12) &lt;&lt; &quot; &quot; &lt;&lt; lcm(18,12) &lt;&lt; endl;</code></p>
 <p>输出是<code>6 36</code> </p>
-<h4 id="2-5-其他"><a href="#2-5-其他" class="headerlink" title="2.5 其他"></a>2.5 其他</h4><hr>
+<h4 id="2-5-其他"><a href="#2-5-其他" class="headerlink" title="2.5 其他"></a>2.5 其他</h4><ul>
+<li><p><code>reverse(s.begin(), s.end())</code> 反转容器元素顺序，复杂度是线性的</p>
+</li>
+<li><p><code>subs1  = s.substr(size_t start,size_t count = npos)</code> 获取 s 的子串，从 start 往后几个元素（后面的参数），return 一个 string 。下面是一个分割字符串的例子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> dotPos = noZero.<span class="built_in">find</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">string prePart = (dotPos == std::string::npos) ? noZero : noZero.<span class="built_in">substr</span>(<span class="number">0</span>, dotPos);</span><br><span class="line">string endPart = (dotPos == std::string::npos) ? <span class="string">&quot;&quot;</span> : noZero.<span class="built_in">substr</span>(dotPos);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
 <h3 id="3-数据结构有关的"><a href="#3-数据结构有关的" class="headerlink" title="3. 数据结构有关的"></a>3. 数据结构有关的</h3><h4 id="3-1-图的邻接矩阵和邻接表实现"><a href="#3-1-图的邻接矩阵和邻接表实现" class="headerlink" title="3.1 图的邻接矩阵和邻接表实现"></a>3.1 图的邻接矩阵和邻接表实现</h4><p>有一颗树或者图，它给定的边是<br><em><strong>1 2</strong></em><br><em><strong>1 3</strong></em><br><em><strong>2 4</strong></em><br><em><strong>3 5</strong></em></p>
 <p>邻接表表示是：</p>
 <p><em><strong>1: 2, 3</strong></em><br><em><strong>2: 1, 4</strong></em><br><em><strong>3: 1, 5</strong></em><br><em><strong>4: 2</strong></em><br><em><strong>5: 3</strong></em></p>
@@ -114,7 +122,27 @@
 <p><code>C++</code>有了<code>vector</code>这个容器后，我们可以更优雅地建图&amp;树</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; graph[N];</span><br><span class="line">graph[a].<span class="built_in">push_back</span>(b) <span class="comment">// 邻接表的节点 a 的邻接链表中添加节点 b</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3-2-栈和队列"><a href="#3-2-栈和队列" class="headerlink" title="3.2 栈和队列"></a>3.2 栈和队列</h4><h4 id="3-3-优先队列"><a href="#3-3-优先队列" class="headerlink" title="3.3 优先队列"></a>3.3 优先队列</h4><blockquote>
+<h4 id="3-2-栈和队列"><a href="#3-2-栈和队列" class="headerlink" title="3.2 栈和队列"></a>3.2 栈和队列</h4><blockquote>
+<p><code>include &lt;stack&gt;</code></p>
+</blockquote>
+<p>栈是一个后进先出(LIFO)表</p>
+<ul>
+<li>构造 <code>stack&lt;int&gt; s;</code></li>
+<li>压栈 <code>s.push(1)</code></li>
+<li>出栈 <code>s.pop()</code></li>
+<li>访问栈顶 <code>s.top()</code></li>
+</ul>
+<blockquote>
+<p><code>include &lt;queue&gt;</code></p>
+</blockquote>
+<p>栈是一个先进先出(FIFO)表</p>
+<ul>
+<li>构造 <code>queue&lt;int&gt; q;</code></li>
+<li>入队 <code>q.push(2)</code></li>
+<li>出队 <code>q.pop()</code></li>
+<li>访问队首 <code>q.front()</code>，<code>q.back()</code></li>
+</ul>
+<h4 id="3-3-优先队列"><a href="#3-3-优先队列" class="headerlink" title="3.3 优先队列"></a>3.3 优先队列</h4><blockquote>
 <p><code>include &lt;queue&gt;</code></p>
 </blockquote>
 <p>优先队列能用来实现堆</p>
@@ -149,9 +177,41 @@
 <li><p>访问堆头元素 <code>q.top()</code></p>
 </li>
 </ul>
-<h4 id="3-4-set-map-｜multiset-multimap"><a href="#3-4-set-map-｜multiset-multimap" class="headerlink" title="3.4 set &amp; map ｜multiset &amp; multimap"></a>3.4 set &amp; map ｜multiset &amp; multimap</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::set <span class="comment">// 是唯一的，有序的集合，用红黑树实现 </span></span><br><span class="line">std::map <span class="comment">// 是键值对的集合，键唯一、有序，用红黑树实现</span></span><br><span class="line"><span class="comment">// 下面是他们的可以重复的版本</span></span><br><span class="line">std::multiset </span><br><span class="line">std::multimap</span><br></pre></td></tr></table></figure>
+<h4 id="3-4-set-map-multiset"><a href="#3-4-set-map-multiset" class="headerlink" title="3.4 set &amp; map &amp; multiset"></a>3.4 set &amp; map &amp; multiset</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::set <span class="comment">// 是唯一的，有序的集合，用红黑树实现 </span></span><br><span class="line">std::map <span class="comment">// 是键值对的集合，键唯一、有序，用红黑树实现</span></span><br><span class="line"><span class="comment">// 下面是他们的可以重复的版本</span></span><br><span class="line">std::multiset </span><br><span class="line">std::multimap</span><br></pre></td></tr></table></figure>
 
-<h4 id="3-5-unordered-set-unordered-map"><a href="#3-5-unordered-set-unordered-map" class="headerlink" title="3.5 unordered_set &amp; unordered_map"></a>3.5 unordered_set &amp; unordered_map</h4><p>这两个版本是<code>std::set</code>和<code>std::map</code>的无序版本，即键不经过排序，这里用哈希实现。</p>
+<h5 id="3-4-1-set-multiset"><a href="#3-4-1-set-multiset" class="headerlink" title="3.4.1 set &amp; multiset"></a>3.4.1 set &amp; multiset</h5><blockquote>
+<p><code>#include &lt;set&gt;</code></p>
+</blockquote>
+<ul>
+<li>构造：<code>set&lt;int&gt; s;</code>或者<code>mulitset&lt;set&gt; s;</code><ul>
+<li>也可以类似priority_queue用数组等构造，复杂度是</li>
+</ul>
+</li>
+<li>插入：<code>s.insert(3)</code>复杂度是$O(logN)$的</li>
+<li>删除：<code>s.erase(2)</code>，返回删除了多少个，复杂度是$O(logN + k)$的，k是找到的个数</li>
+<li>计数：<code>s.count(3)</code>，返回有多少个对应元素，复杂度是$O(logN)$的，k是找到的个数</li>
+<li>查找：<code>s.find(2)</code>，返回一个值相等的元素的迭代器，没找到，返回<code>s.end()</code>复杂度是$O(logN)$的</li>
+<li>也有<code>s.lower_bound(2)</code>、<code>s.upper_bound(3)</code>函数。复杂度是$O(logN)$的</li>
+</ul>
+<h5 id="3-4-2-map"><a href="#3-4-2-map" class="headerlink" title="3.4.2 map"></a>3.4.2 map</h5><blockquote>
+<p><code>#include &lt;map&gt;</code></p>
+</blockquote>
+<ul>
+<li>构造：<code>map&lt;int, string&gt; s;</code><ul>
+<li>支持数组构造和自定义比较函数</li>
+</ul>
+</li>
+<li>删除：<code>s.erase(2)</code>，返回删除了多少个，复杂度是$O(logN)$</li>
+<li>计数：<code>s.count(3)</code>，返回有多少个key相等的元素，复杂度是$O(logN)$</li>
+<li>查找：<code>s.find(2)</code>，返回key相等的元素迭代器，如果没找到，返回<code>s.end()</code>，复杂度是$O(logN)$</li>
+<li>也有<code>s.lower_bound(2)</code>、<code>s.upper_bound(3)</code>函数。复杂度是$O(logN)$</li>
+</ul>
+<h4 id="3-5-unordered-set-unordered-map"><a href="#3-5-unordered-set-unordered-map" class="headerlink" title="3.5 unordered_set &amp; unordered_map"></a>3.5 unordered_set &amp; unordered_map</h4><blockquote>
+<p><code>#include&lt;unordered_set&gt;</code> <code>#include&lt;unordered_map&gt;</code></p>
+</blockquote>
+<p>成员函数与 set 和 map 类似，但是因为无序所以没有 <code>lower_bound</code> 和 <code>upper_bound</code> 。</p>
+<p>同时由于是使用哈希实现的，因此插入、删除、访问、查找的平均复杂度均为 O(1)。因此，在没有排序需求时可以首选这两个容器。</p>
+<p>这两个版本是<code>std::set</code>和<code>std::map</code>的无序版本，即键不经过排序，这里用哈希实现。</p>
 <blockquote>
 <p>声明: 本文中的大部分内容引用自 <a target="_blank" rel="noopener" href="https://xuan-insr.github.io/cpp/cpp_for_contests/#1-%E5%9F%BA%E7%A1%80">咸鱼暄的笔记</a>，仅供学习和交流使用，版权归原作者所有。如有侵权，请联系删除。</p>
 </blockquote>
@@ -165,4 +225,4 @@ var disqus_url = 'https://HughTaiyaki.github.io/Blog/2024/09/03/快速入门C-�
     dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><script id="dsq-count-scr" src="//#{theme.disqus}.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/Blog/js/jquery-3.1.0.min.js"></script><script src="/Blog/js/bootstrap.min.js"></script><script src="/Blog/js/jquery-migrate-1.2.1.min.js"></script><script src="/Blog/js/jquery.appear.js"></script><script src="/Blog/js/google-analytics.js"></script><script src="/Blog/js/typography.js"></script></body></html>
+})();</script><script id="dsq-count-scr" src="//#{theme.disqus}.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/Blog/js/jquery-3.1.0.min.js"></script><script src="/Blog/js/bootstrap.min.js"></script><script src="/Blog/js/jquery-migrate-1.2.1.min.js"></script><script src="/Blog/js/jquery.appear.js"></script><script src="/Blog/js/google-analytics.js"></script><script src="/Blog/js/typography.js"></script><script src="/Blog/js/prism.js"></script></body></html>
