@@ -15,10 +15,47 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.profile-pic img {
-  border-radius: 50%;
+.profile-pic {
+  position: relative;
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 15px; /* 给头像和光环之间留空隙 */
+  border: 5px solid #add8e6; /* 淡蓝色光环 */
+  overflow: hidden; /* 保证头像不会被光环遮挡 */
+  transition: transform 0.3s; /* 平滑过渡 */
+}
+.profile-pic img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #007BFF;
+  border-radius: 50%;
+  transform-origin: 50% 50%; /* 让旋转的原点在光环的圆周上 */
+  transition: transform 0.3s ease-in-out;
+}
+/* 鼠标悬停时启动光环和小圆点的旋转 */
+.profile-pic:hover .dot {
+  animation: dot-animation 2s infinite linear;
+}
+.profile-pic:hover {
+  transform: rotate(360deg); /* 光环旋转 */
+}
+@keyframes dot-animation {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(-70px);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(-70px);
+  }
 }
 .personal-info h2 {
   font-size: 2em;
@@ -44,4 +81,4 @@
   font-size: 0.9em;
 }</style><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/Blog/atom.xml" title="Taiyaki's Blog" type="application/atom+xml">
 <link rel="stylesheet" href="/Blog/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/Blog/css/prism-line-numbers.css" type="text/css"></head><body><div class="about-container"><div class="profile-pic"><img src="../images/favicon.png" alt="Profile Picture"></div><div class="personal-info"><h2>HughTaiyaki</h2><h3>鲷鱼烧</h3></div><div class="links"><a target="_blank" rel="noopener" href="https://github.com/yourusername"><i class="fab fa-github"></i></a><a href="https://hughtaiyaki.github.io/Blog/"><i class="fas fa-blog"></i></a><a href="https://hughtaiyaki.github.io/"><i class="fas fa-book"></i></a><a target="_blank" rel="noopener" href="https://space.bilibili.com/38913631"><i class="fas fa-play-circle"> </i></a><a href="xcy.231x@gmail.com"><i class="fas fa-envelope"></i></a><a target="_blank" rel="noopener" href="https://yourtelegramurl.com"><i class="fab fa-telegram"></i></a></div><div class="footer"><p>Copyright © 2022-2024 @HughTaiyaki</p></div></div></body></html>
+<link rel="stylesheet" href="/Blog/css/prism-line-numbers.css" type="text/css"></head><body><div class="about-container"><div class="profile-pic"><img src="../images/favicon.png" alt="Profile Picture"><div class="dot"></div></div><div class="personal-info"><h2>HughTaiyaki</h2><h3>鲷鱼烧</h3></div><div class="links"><a target="_blank" rel="noopener" href="https://github.com/HughTaiyaki"><i class="fab fa-github"></i></a><a href="https://hughtaiyaki.github.io/Blog/"><i class="fas fa-blog"></i></a><a href="https://hughtaiyaki.github.io/"><i class="fas fa-book"></i></a><a target="_blank" rel="noopener" href="https://space.bilibili.com/38913631"><i class="fas fa-play-circle"> </i></a><a href="xcy.231x@gmail.com"><i class="fas fa-envelope"></i></a><a target="_blank" rel="noopener" href="https://yourtelegramurl.com"><i class="fab fa-telegram"></i></a></div><div class="footer"><p>Copyright © 2022-2024 @HughTaiyaki</p></div></div></body></html>
