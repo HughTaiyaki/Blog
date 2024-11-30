@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>vim基本操作 · Taiyaki's Blog</title><meta name="description" content="一：四种模式
+nommal
+insert
+visual
+命令模式
+
+normal to insert
+i在光标前插入
+I行首插入
+o下一行插入
+O上一行插入
+a光标后插入
+A行尾 插入
+
+normal to visual
+按v(visual)
+退回普通就摁v或者jj没错
+可视模式选中文字复制很好用
+"><meta name="og:description" content="一：四种模式
+nommal
+insert
+visual
+命令模式
+
+normal to insert
+i在光标前插入
+I行首插入
+o下一行插入
+O上一行插入
+a光标后插入
+A行尾 插入
+
+normal to visual
+按v(visual)
+退回普通就摁v或者jj没错
+可视模式选中文字复制很好用
+"><meta name="twitter:site" content="Taiyaki's Blog"><meta name="twitter:title" content="vim基本操作"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/Blog/css/bootstrap.min.css"><link rel="stylesheet" href="/Blog/css/font-awesome.min.css"><link rel="stylesheet" href="/Blog/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 引入 highlight.js 样式--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"><!-- 引入 highlight.js 脚本--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><link rel="stylesheet" href="/Blog/css/prism.css"><Prism class="highlightAll"></Prism><meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/Blog/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/Blog/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/Blog/">Hugh Taiyaki</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/Blog/">鲷鱼烧</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/Blog/">首页</a></li><li><a href="/Blog/archives">归档</a></li><li><a href="/Blog/tags">标签</a></li><li><a href="/Blog/about/index.html">关于</a></li><li class="soc"><a href="https://HughTaiyaki.github.io/Blog/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>vim基本操作</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2022-02-05</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/Blog/2022/02/05/vim%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/#comments">评论</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/Blog/tags/技术/" title="技术">技术</a><span>&nbsp;</span></span></p><p class="post-abstract"><p><img src="/Blog/./images/0205Vim22/vimImg.png"></p>
+<h2 id="一：四种模式"><a href="#一：四种模式" class="headerlink" title="一：四种模式"></a>一：四种模式</h2><ol>
+<li>nommal</li>
+<li>insert</li>
+<li>visual</li>
+<li>命令模式</li>
+</ol>
+<h3 id="normal-to-insert"><a href="#normal-to-insert" class="headerlink" title="normal to insert"></a>normal to insert</h3><ul>
+<li>i在<strong>光标前</strong>插入</li>
+<li>I<strong>行首</strong>插入</li>
+<li>o<strong>下一行</strong>插入</li>
+<li>O<strong>上一行</strong>插入</li>
+<li>a<strong>光标后</strong>插入</li>
+<li>A<strong>行尾</strong> 插入</li>
+</ul>
+<h3 id="normal-to-visual"><a href="#normal-to-visual" class="headerlink" title="normal to visual"></a>normal to visual</h3><ul>
+<li>按v(visual)</li>
+<li>退回普通就摁v或者jj没错</li>
+<li>可视模式选中文字复制很好用</li>
+</ul>
+<h3 id="normal-to-command"><a href="#normal-to-command" class="headerlink" title="normal to command"></a>normal to command</h3><ul>
+<li>按<strong>冒号:</strong></li>
+<li>退回普通模式用jj</li>
+<li>比如用12就能跳转12行</li>
+</ul>
+<p><br><hr></p>
+<h2 id="二：在normal下的光标移动"><a href="#二：在normal下的光标移动" class="headerlink" title="二：在normal下的光标移动"></a>二：在normal下的光标移动</h2><ul>
+<li><strong>下上是jk</strong></li>
+<li><strong>左右是hl</strong><br></li>
+<li>w(word)跳到单词开头</li>
+<li>b(back)<ul>
+<li>如果在本单词中 跳转本单词开头</li>
+<li>跳到开头再跳开头</li>
+</ul>
+</li>
+<li>e(end)<ul>
+<li>如果在本单词中 跳转本单词末尾</li>
+<li>跳到末尾再跳末尾<br></li>
+</ul>
+</li>
+<li>0 行首</li>
+<li><strong>^</strong> 行首第一个非空字符</li>
+<li><strong>$</strong> 行尾</li>
+<li><strong>gg</strong> 第一行</li>
+<li><strong>G</strong> 最后一行</li>
+<li><strong>f{char}</strong> 往下找跳到这行这个字符所在位置</li>
+<li><strong>F{char}</strong> 往上找跳到这行这个字符所在位置</li>
+<li><strong>;</strong> 重复上次的查找操作 往后找</li>
+<li><strong>,</strong> 重复上次往回找</li>
+</ul>
+<h2 id="三：visual模式下动作-motion"><a href="#三：visual模式下动作-motion" class="headerlink" title="三：visual模式下动作(motion)"></a>三：<em>visual</em>模式下动作(motion)</h2><ul>
+<li><p>i(inner)和a(around)的区别</p>
+</li>
+<li><p>加粗表示选中内容</p>
+<table>
+<thead>
+<tr>
+<th>NULL</th>
+<th>i</th>
+<th>a</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i”</td>
+<td>“<strong>word</strong>“</td>
+<td><strong>“word”</strong></td>
+</tr>
+<tr>
+<td>iw</td>
+<td><strong>word</strong></td>
+<td><strong>空格word</strong></td>
+</tr>
+<tr>
+<td>i(</td>
+<td>(<strong>word</strong>)</td>
+<td><strong>(word)</strong></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>常见motion</p>
+<ul>
+<li>iw&#x2F; aw</li>
+<li>i(&#x2F; a(  or  ib&#x2F;ab</li>
+<li>i{&#x2F; a{  or  iB&#x2F;aB</li>
+<li>i”&#x2F; a”</li>
+<li>i’&#x2F; a’</li>
+<li>i&#96;&#x2F;</li>
+<li>i&lt;&#x2F; a&lt;</li>
+<li>i[&#x2F; a[</li>
+</ul>
+</li>
+<li><p>html常用</p>
+<ul>
+<li>it&#x2F;at   tag是标签</li>
+<li>is&#x2F;as   sentence是句子</li>
+<li>ip&#x2F;ap   paragraph是段落</li>
+</ul>
+</li>
+</ul>
+<h2 id="四-在normal下的操作符-operator"><a href="#四-在normal下的操作符-operator" class="headerlink" title="四:在normal下的操作符(operator)"></a>四:在normal下的操作符(operator)</h2><ul>
+<li>d(delete)</li>
+<li>c(change) 修改(删除并进入插入模式)<ul>
+<li><strong>可以配合motion用</strong></li>
+</ul>
+</li>
+<li>y(yank) 复制</li>
+<li>u是撤销，不过我习惯用ctrl+c</li>
+</ul>
+<h3 id="常用的操作"><a href="#常用的操作" class="headerlink" title="常用的操作"></a><em><strong>常用的操作</strong></em></h3><ul>
+<li>yyp</li>
+<li>Ndd  N∈N+</li>
+<li>Ncc  N∈N+</li>
+<li>Nyy  N∈N+ </li>
+<li>ciw&#x2F;&lt;&#x2F;&#96;</li>
+<li>diw&#x2F;(&#x2F;其实换成b挺好用的</li>
+<li>da&lt;</li>
+<li>ca(</li>
+<li>yi(</li>
+</ul>
+<h2 id="五-一些训练"><a href="#五-一些训练" class="headerlink" title="五:一些训练"></a>五:一些训练</h2><ul>
+<li><p>TODO:1 修改HelloWord </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name</span>:<span class="string">`HelloWorld`</span>,                </span><br><span class="line"><span class="comment">//似乎只有在前面ci`才有用 ciw只能到这个单词里才有用，要么先f过去</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:2 修改泛型 ci&lt;</p>
+</li>
+<li><p>TODO:3 删除泛型 di&lt; da&lt;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count =ref&lt;string&gt;(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:4 删除返回值 diB 或者 di{</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">return</span>&#123;</span><br><span class="line">   flag,</span><br><span class="line">   handleSetTrue,</span><br><span class="line">   handleSetFalse,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:5 删除括号里的内容 dib 或者 di(</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count = <span class="title function_">ref</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:6 删除数组里面的内容 di[ ci[</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:7 删除或修改模板字符串的内容  di` ci&#96;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> templateString  =<span class="string">`foo<span class="subst">$&#123;arr&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:8 删除2行 2dd 复制2行 2yy 修改2行 2cc</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a=<span class="number">1</span></span><br><span class="line"><span class="keyword">const</span> b=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:9 删除到某个 修改到某个 复制到某个</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//vim is awesome</span></span><br><span class="line">s awess awess awess awess awess awess awes</span><br><span class="line"><span class="comment">//如果复制s到e再p下去是上面这样的</span></span><br><span class="line"><span class="comment">//❀------------------------------------------------------分割线</span></span><br><span class="line"><span class="comment">//当然是使用 df&#123;char&#125; cf某个 yf某个 </span></span><br><span class="line"><span class="comment">//当然啦F是向前找,别忘了</span></span><br><span class="line"><span class="comment">//另外找字符注意标点的全角半角不然可能找不到</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:10 删除到 修改到 复制到 本行众的<strong>开头^ &#x2F; 结尾$</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这个只需要d^ 或者c$</span></span><br><span class="line">tech otakus save the world</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:11 删除、修改、复制<strong>整个</strong>文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cie die yie</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:12 删除、修改、复制<strong>标签</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>天下第一喵<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--cit dit yit--&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TODO:13 快速选中<br>这个实际上就是利用可视模式<br>viw vaw vi&#96; vf{char} 这些都行</p>
+</li>
+</ul>
+<hr>
+
+
+<h2 id="六-大小写切换"><a href="#六-大小写切换" class="headerlink" title="六:大小写切换"></a>六:大小写切换</h2><ul>
+<li>~ 当前光标切换</li>
+<li>n~ 光标开始的n个字母切换</li>
+<li>g~~ 改变当前行的大小写</li>
+<li>gUU 当前行大写</li>
+<li>guu 当前行小写</li>
+<li>gUaw(gUiw) 光标下单词大写，当然不止w，还有b &#96; B 这种</li>
+<li>guaw(guiw) 光标下单词小写</li>
+<li>在选中模式下利用U u转换</li>
+</ul>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">createapp</span>(app)</span><br><span class="line">.<span class="title function_">use</span>(store)</span><br><span class="line">.<span class="title function_">use</span>(router)</span><br><span class="line">.<span class="title function_">mount</span>(<span class="string">`#app`</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="七-TIP"><a href="#七-TIP" class="headerlink" title="七:TIP"></a>七:TIP</h2><ol>
+<li>找函数 gd</li>
+<li>标签页切换 gt</li>
+<li>easymotion中的一些操作 比如<leader><leader>f<char></li>
+<li>vim-surround</li>
+<li>双光标</li>
+</ol>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://HughTaiyaki.github.io/Blog/2022/02/05/vim基本操作/%20Taiyaki's Blog%20vim基本操作"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/Blog/2023/07/16/CS61A/" title="CS61A -week1"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: CS61A -week1</a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'httpshughtaiyakigithubioblog';
+var disqus_identifier = '2022/02/05/vim基本操作/';
+var disqus_title = 'vim基本操作';
+var disqus_url = 'https://HughTaiyaki.github.io/Blog/2022/02/05/vim基本操作/';
+(function () {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//#{theme.disqus}.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://HughTaiyaki.github.io/Blog" rel="noopener noreferrer">Taiyaki</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/Blog/js/jquery-3.1.0.min.js"></script><script src="/Blog/js/bootstrap.min.js"></script><script src="/Blog/js/jquery-migrate-1.2.1.min.js"></script><script src="/Blog/js/jquery.appear.js"></script><script src="/Blog/js/google-analytics.js"></script><script src="/Blog/js/typography.js"></script><script src="/Blog/js/prism.js"></script></body></html>
