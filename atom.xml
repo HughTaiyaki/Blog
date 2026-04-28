@@ -31,7 +31,7 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;❄️11月的尾声下雪了～&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;一：Mkdocs-食用手册&quot;&gt;&lt;a href=&quot;#一：Mkdocs-食用手册&quot; class=&quot;headerlink&quot; title=&quot;一：Mkdocs</summary>
+&lt;h3 id=&quot;一：Mkdocs-食用手册&quot;&gt;一：Mkdocs</summary>
         
       
     
@@ -57,7 +57,7 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;itmo 的一个国际项目，给国内大学生培训的，基本没听懂，做的时候是猜测做法组合然后丢给 GPT 生成的，记录一下拓宽下眼界。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;一：Number-Theory&quot;&gt;&lt;a</summary>
+&lt;h2 id=&quot;一：Number-Theory&quot;&gt;一：Number</summary>
         
       
     
@@ -135,7 +135,7 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;9.6 - 9.8号体验了下数模，很累的一个比赛。作为一个编程手主要任务就是把建模手的需求转换成代码。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;我学到了什么？&quot;&gt;&lt;a href=&quot;#我学到了什么？&quot;</summary>
+&lt;h3</summary>
         
       
     
@@ -226,7 +226,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;数学知识&quot;&gt;&lt;a href=&quot;#数学知识&quot; class=&quot;headerlink&quot; title=&quot;数学知识&quot;&gt;&lt;/a&gt;数学知识&lt;/h2&gt;&lt;h3 id=&quot;近世代数-｜-Modern-Algerbra&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;数学知识&quot;&gt;数学知识&lt;/h2&gt;
+&lt;h3 id=&quot;近世代数-｜-Modern-Algerbra&quot;&gt;近世代数 ｜ Modern</summary>
         
       
     
@@ -250,9 +251,11 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;重新用hexo和github pages搭了个网站，算是迁移之前的旧网站吧。&lt;br&gt;以下是食用说明，防止遗忘。&lt;/p&gt;
+&lt;p&gt;重新用hexo和github pages搭了个网站，算是迁移之前的旧网站吧。&lt;br&gt;
+以下是食用说明，防止遗忘。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;官方说明&quot;&gt;&lt;a href=&quot;#官方说明&quot; class=&quot;headerlink&quot;</summary>
+&lt;h2 id=&quot;官方说明&quot;&gt;官方说明&lt;/h2&gt;
+&lt;p&gt;Welcome to &lt;a</summary>
         
       
     
@@ -275,7 +278,11 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;集合论：从高中到大学&quot;&gt;&lt;a href=&quot;#集合论：从高中到大学&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1&gt;集合论：从高中到大学&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;复习闫总的dp分析法，发现其实用了集合的思想，然后学了一顿集合论，但是发现其实有些问题没必要解决。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2</summary>
         
       
     
@@ -298,7 +305,11 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;通俗易懂的乐理知识&quot;&gt;&lt;a href=&quot;#通俗易懂的乐理知识&quot; class=&quot;headerlink&quot; title=&quot;通俗易懂的乐理知识&quot;&gt;&lt;/a&gt;通俗易懂的乐理知识&lt;/h1&gt;&lt;h2 id=&quot;钢琴键盘&quot;&gt;&lt;a href=&quot;#钢琴键盘&quot;</summary>
+    <summary type="html">&lt;h1&gt;通俗易懂的乐理知识&lt;/h1&gt;
+&lt;h2 id=&quot;钢琴键盘&quot;&gt;钢琴键盘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;88键去掉左边3个，右边1个，剩下能划分成7个组，每组7个白键，5个黑键&lt;br&gt;
+&lt;img src=&quot;./images/0727music23/music1.png&quot;</summary>
         
       
     
@@ -321,7 +332,14 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;通俗易懂的经济泡沫&quot;&gt;&lt;a href=&quot;#通俗易懂的经济泡沫&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1&gt;通俗易懂的经济泡沫&lt;/h1&gt;
+&lt;p&gt;价值包括使用价值，情绪价值，性感资本，地位价值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单的介绍，详情请见《行为金融》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;泡沫特性：后知后觉,戳破的了才是泡沫&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资产价格 &amp;gt;&amp;gt;</summary>
         
       
     
@@ -344,7 +362,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;CS61A-week1&quot;&gt;&lt;a href=&quot;#CS61A-week1&quot; class=&quot;headerlink&quot; title=&quot;CS61A - week1&quot;&gt;&lt;/a&gt;CS61A - week1&lt;/h1&gt;&lt;ul&gt;
+    <summary type="html">&lt;h1&gt;CS61A - week1&lt;/h1&gt;
+&lt;ul&gt;
 &lt;li&gt;官网地址&lt;a</summary>
         
       
@@ -368,8 +387,8 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/Blog/./images/0205Vim22/vimImg.png&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;一：四种模式&quot;&gt;&lt;a href=&quot;#一：四种模式&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;./images/0205Vim22/vimImg.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2</summary>
         
       
     
