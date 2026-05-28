@@ -3,20 +3,23 @@
 <p>以前跟y总学基础算法板子的时候基本上是从0实现的，这很麻烦，适用于锻炼算法能力。而作为一个需要应对面试算法题的学生，我们应该避免造轮子，这样可以省下很多时间。</p>
 <p>下面是C++相比较C语言的一些比较好用的新特性。</p>
 </blockquote>
-<h2 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h2><h3 id="1-1-引用"><a href="#1-1-引用" class="headerlink" title="1.1 引用"></a>1.1 引用</h3><p>在C语言中，符号<code>&amp;</code> 是取地址符。而在C++中，<code>&amp;</code> 有一个新的作用：定义引用变量。引用就是某一个变量的别名。<strong>引用必须在声明的同时进行初始化，并且一旦初始化后就不能再指向其他对象。</strong></p>
+<h2 id="1-基础">1.基础</h2>
+<h3 id="1-1-引用">1.1 引用</h3>
+<p>在C语言中，符号<code>&amp;</code> 是取地址符。而在C++中，<code>&amp;</code> 有一个新的作用：定义引用变量。引用就是某一个变量的别名。<strong>引用必须在声明的同时进行初始化，并且一旦初始化后就不能再指向其他对象。</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">42</span>;</span><br><span class="line"><span class="type">int</span>&amp; ref = num; <span class="comment">// 使用 &amp; 声明一个引用 ref，ref 是 num 的别名</span></span><br><span class="line">ref = <span class="number">50</span>; <span class="comment">// 修改 ref 的值，也会改变 num 的值</span></span><br></pre></td></tr></table></figure>
-
 <p>在这个例子中，ref 是 num 的引用。对 ref 的任何操作都会影响到 num，因为它们引用的是相同的内存地址。</p>
 <p>指针解决了我们在传递参数时带来的效率和空间消耗等问题。而引用相比于指针更加安全（避免对内存的非法引用）、可读性更高，同时不需要额外分配内存单元。</p>
-<p>和指针类似，<code>int &amp;a = b, c = d</code>中，<code>a</code>的类型是<code>int &amp;</code>,而c 是<code>int</code> </p>
+<p>和指针类似，<code>int &amp;a = b, c = d</code>中，<code>a</code>的类型是<code>int &amp;</code>,而c 是<code>int</code></p>
 <p>引用其实就是指针包装了下。</p>
 <p>引用的目的主要用于函数的参数传递。例如:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a,<span class="type">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> t = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> var1 = <span class="number">1</span>,var2 = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">swap</span>(var1,var2);</span><br><span class="line">    cout &lt;&lt; var1 &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; var2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-2-数组，字符串与pair"><a href="#1-2-数组，字符串与pair" class="headerlink" title="1.2 数组，字符串与pair"></a>1.2 数组，字符串与pair</h3><h4 id="1-2-1-vector"><a href="#1-2-1-vector" class="headerlink" title="1.2.1 vector"></a>1.2.1 vector</h4><blockquote>
-<p><code>#include &lt;vector&gt; </code> </p>
+<h3 id="1-2-数组，字符串与pair">1.2 数组，字符串与pair</h3>
+<h4 id="1-2-1-vector">1.2.1 vector</h4>
+<blockquote>
+<p><code>#include &lt;vector&gt; </code></p>
 </blockquote>
 <p>vector是增加长度的数组，内存会自己释放</p>
-<p><strong>创建：</strong> </p>
+<p><strong>创建：</strong></p>
 <ul>
 <li><code>vector&lt;int&gt; v;</code></li>
 <li><code>vector&lt;int&gt; v =&#123;1, 2, 3&#125;;</code>  初始化</li>
@@ -24,24 +27,25 @@
 <li><code>vector&lt;int&gt; v(n, 1);</code> 的方式构造一个大小为<code>n</code>每个元素都是<code>1</code>的vector</li>
 </ul>
 <p><strong>获取长度:</strong> <code>v.size()</code></p>
-<p><strong>末尾插入元素</strong> <code>v.push_back(x)</code> </p>
-<p><strong>访问（读取&#x2F;修改）元素</strong> <code>v[i]</code> ,注意当<code>i &gt;= v.size()</code> 的时候，程序可能会发生运行错误</p>
+<p><strong>末尾插入元素</strong> <code>v.push_back(x)</code></p>
+<p><strong>访问（读取/修改）元素</strong> <code>v[i]</code> ,注意当<code>i &gt;= v.size()</code> 的时候，程序可能会发生运行错误</p>
 <p><strong>遍历</strong> 因为它是一个容器，所以在<code>C++11</code>中可以用<code>for (auto a : v) sum += a;</code>遍历。这种写法叫做range-based for loop。<code>C++11</code> 这里的 <code>auto</code> 会自动推断出 <code>a</code> 的数据类型，也就是 vector <code>v</code> 中元素的类型，官方称呼是 Placeholder type specifiers。在做 LeetCode 的绝大多数场景下，我们可以使用 <code>for (auto &amp;a : v)</code> ，加上一个引用。加上这个引用后就不会在遍历的过程中每次循环都构造一个临时变量，在遍历二维 <code>vector</code> 的时候尤为有意义。当然加上引用后对这个变量 <code>a</code> 做的改动会真实地影响到 <code>vector v</code> 。</p>
 <p>例如：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; v =&#123;</span><br><span class="line">  &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,</span><br><span class="line">  &#123;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>&#125;,</span><br><span class="line">  &#123;<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span>&amp; row :v)&#123; <span class="comment">//遍历每一行</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span>&amp; var : row)&#123; <span class="comment">// 遍历每一行中的每个值</span></span><br><span class="line">    cout &lt;&lt; var &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-2-2-string"><a href="#1-2-2-string" class="headerlink" title="1.2.2 string"></a>1.2.2 string</h4><blockquote>
-<p><code>#include &lt;string&gt;</code> </p>
+<h4 id="1-2-2-string">1.2.2 string</h4>
+<blockquote>
+<p><code>#include &lt;string&gt;</code></p>
 </blockquote>
 <p>string是C++里的字符串。实现和C的字符数组一样，也是以<code>\0</code>标识结束</p>
 <p><strong>构造</strong> <code>string s</code> or <code>string s = &quot;123&quot;</code></p>
 <p><strong>获取长度</strong> <code>s.length()</code> or <code>s.size()</code> 但长度不包含末尾的<code>\0</code></p>
-<p><strong>拼接</strong> <code>s1 + s2</code> or <code>s + &#39;a&#39;</code> </p>
+<p><strong>拼接</strong> <code>s1 + s2</code> or <code>s + 'a'</code></p>
 <p><strong>访问</strong> <code>s[i]</code></p>
 <p><strong>遍历</strong> <code>for (auto c : s)</code></p>
-<p><strong>比较</strong> 可以用<code>==</code>,<code>!=</code> <code>&gt;</code> 等比较运算符按字典序比较2个字符串 </p>
+<p><strong>比较</strong> 可以用<code>==</code>,<code>!=</code> <code>&gt;</code> 等比较运算符按字典序比较2个字符串</p>
 <p><strong>获得子串</strong>通过成员函数<code>substr(pos,n)</code>，从pos开始往后拷贝n个字符，return一个string</p>
-<h4 id="1-2-3-pair"><a href="#1-2-3-pair" class="headerlink" title="1.2.3 pair"></a>1.2.3 pair</h4><blockquote>
+<h4 id="1-2-3-pair">1.2.3 pair</h4>
+<blockquote>
 <p><code>#include &lt;utility&gt;</code></p>
 </blockquote>
 <p>pair可以把两个不同的类型放到一起操作。</p>
@@ -49,80 +53,93 @@
 <p><strong>访问</strong> <code>p1.first</code>、<code>p1.second</code> 的方法访问其成员。</p>
 <p><strong>比较</strong> pair默认比较方法是先按照第一个字段比较，相同再按第二个字段比较</p>
 <hr>
-<h3 id="2-比较好用的"><a href="#2-比较好用的" class="headerlink" title="2. 比较好用的"></a>2. 比较好用的</h3><h4 id="2-1-sort"><a href="#2-1-sort" class="headerlink" title="2.1 sort"></a>2.1 sort</h4><blockquote>
+<h3 id="2-比较好用的">2. 比较好用的</h3>
+<h4 id="2-1-sort">2.1 sort</h4>
+<blockquote>
 <p><code>include &lt;algorithm&gt;</code></p>
 </blockquote>
-<p><code>sort</code>可以对数组或vector等可随机访问元素可比较的数据结构做一个排序，复杂度是$O(n\log n)$ </p>
+<p><code>sort</code>可以对数组或vector等可随机访问元素可比较的数据结构做一个排序，复杂度是$O(n\log n)$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[ ] = &#123;<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">-2</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">sort</span>(a, a + <span class="number">6</span>);</span><br></pre></td></tr></table></figure>
-
 <p>此时得到 -2 1 3 3 4 5, 为<strong>升序</strong></p>
 <p>对于<code>vector</code> 也可以使用类似</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">-2</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
-
 <p>如果想要降序呢?</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>(), <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line"><span class="comment">// 此时v的值是5 4 3 3 1 -2</span></span><br></pre></td></tr></table></figure>
-
 <p>另外，我们可以自定义比较函数。比较函数接收两个元素的引用，返回一个bool表示前者是否应该在后者前面:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">const</span> <span class="type">int</span>&amp; a,<span class="type">const</span> <span class="type">int</span>&amp; b)</span></span>&#123;<span class="keyword">return</span> a &gt; b; &#125; <span class="comment">//严格大于</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">-2</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),cmp);</span><br></pre></td></tr></table></figure>
-
 <p><code>C++11</code> 也可以用lambda表达式</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">-2</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>(), [](<span class="type">const</span> <span class="type">int</span>&amp; a,<span class="type">const</span> <span class="type">int</span>&amp; b) &#123;<span class="keyword">return</span> a &gt; b;&#125;)</span><br></pre></td></tr></table></figure>
-
 <p>当然啦前面的自定义函数可以适用于更复杂的排序，例如需要比较多元素本身没有内置的比较运算符的时候</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">const</span> vector&lt;<span class="type">int</span>&gt;&amp; a, <span class="type">const</span> vector&lt;<span class="type">int</span>&gt;&amp; b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a[<span class="number">0</span>] == b[<span class="number">0</span>] ? a[<span class="number">1</span>] &lt; b[<span class="number">1</span>] : a[<span class="number">0</span>] &lt; b[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个函数就能用于<code>vector&lt;vector&lt;int&gt;&gt;</code> 的排序，比如 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">56.合并区间</a>  <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">452. 用最少数量的箭引爆气球</a> </p>
+<p>这个函数就能用于<code>vector&lt;vector&lt;int&gt;&gt;</code> 的排序，比如 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">56.合并区间</a>  <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">452. 用最少数量的箭引爆气球</a></p>
 <p>常用的标准库<code>std::sort</code>实现保证复杂度是$O(n\log{n})$  ,结合了快速排序、堆排序和插入排序，能够在最坏情况下保证$O(n \log n)$的时间复杂度。如果递归深度超过一个特定的阈值（通常是$2 \log n$），为了避免快速排序的最坏情况$O(n^2)$，<code>std::sort</code> 切换到堆排序，这样就能保证最坏情况下的时间复杂度是$O(n \log n)$。对于非常小的数组或者递归到足够小的子数组时(通常是小于16个元素)<code>std::sort</code>会使用插入排序，因为在小规模数据集上，插入排序的常数时间复杂度较低。</p>
-<h4 id="2-2-upper-bound-lower-bound-binary-search"><a href="#2-2-upper-bound-lower-bound-binary-search" class="headerlink" title="2.2 upper_bound &amp; lower_bound | binary_search"></a>2.2 upper_bound &amp; lower_bound | binary_search</h4><blockquote>
+<h4 id="2-2-upper-bound-lower-bound-binary-search">2.2 upper_bound &amp; lower_bound | binary_search</h4>
+<blockquote>
 <p><code>include &lt;algorithm&gt;</code></p>
 </blockquote>
 <p>用于<strong>有序数组</strong>的二分! 可以指定比较函数</p>
 <ul>
-<li><p><code>auto u = upper_bound(s.begin(), s.end(), i)</code></p>
+<li>
+<p><code>auto u = upper_bound(s.begin(), s.end(), i)</code></p>
 <p>返回第一个<strong>严格大于</strong><code>i</code>的元素的迭代器（和指针差不多，可以用<code>*u</code>获取其值)；如果没找到，返回第二个参数<code>s.end()</code></p>
 </li>
-<li><p><code>auto u = lower_bound(s.begin(), s.end(), i)</code></p>
+<li>
+<p><code>auto u = lower_bound(s.begin(), s.end(), i)</code></p>
 <p>返回第一个<strong>大于等于</strong><code>i</code>的元素的迭代器；如果没找到，返回第二个参数，即<code>data.end()</code></p>
 <p>这是一个比较函数的例子，告诉函数怎么向右找，假如我们有一个自定义结构</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">PriceInfo</span> &#123;</span><br><span class="line">    <span class="type">double</span> price;</span><br><span class="line">    string name;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
 <p>我们可以这样这样比较不同的元素（容器中的 PriceInfo 和查找的 double 类型）</p>
 <p><code>auto prc_info = lower_bound(prices.begin(), prices.end()), i, [](const PriceInfo&amp; info, double value)&#123;return info.price &lt; value;&#125;);</code></p>
 </li>
-<li><p><code>binary_search (v.begin(), v.end(), i)</code> </p>
+<li>
+<p><code>binary_search (v.begin(), v.end(), i)</code></p>
 <p>返回一个bool，表示<code>i</code>是否在<code>v</code>中。</p>
 </li>
 </ul>
-<h4 id="2-3-unique"><a href="#2-3-unique" class="headerlink" title="2.3 unique"></a>2.3 unique</h4><blockquote>
+<h4 id="2-3-unique">2.3 unique</h4>
+<blockquote>
 <p><code>include &lt;algorithm&gt;</code></p>
 </blockquote>
 <p>一般用来配合排序去重，因为这个是去掉<strong>连续的重复元素</strong>。</p>
 <p>下面是完全去重操作</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span>(alls.<span class="built_in">begin</span>(),alls.<span class="built_in">end</span>());</span><br><span class="line">alls.<span class="built_in">erase</span>(<span class="built_in">unique</span>(alls.<span class="built_in">begin</span>(),alls.<span class="built_in">end</span>()), alls.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-4-gcd-lcm-C-17"><a href="#2-4-gcd-lcm-C-17" class="headerlink" title="2.4 gcd &amp; lcm C++17"></a>2.4 gcd &amp; lcm <code>C++17</code></h4><blockquote>
-<p><code>#include &lt;numeric&gt;</code> </p>
+<h4 id="2-4-gcd-lcm-C-17">2.4 gcd &amp; lcm <code>C++17</code></h4>
+<blockquote>
+<p><code>#include &lt;numeric&gt;</code></p>
 </blockquote>
 <p>这个是<code>C++17</code>才加上的特性，经常记不住辗转相除法怎么写</p>
 <p><code>cout &lt;&lt; gcd(18, 12) &lt;&lt; &quot; &quot; &lt;&lt; lcm(18,12) &lt;&lt; endl;</code></p>
-<p>输出是<code>6 36</code> </p>
-<h4 id="2-5-其他"><a href="#2-5-其他" class="headerlink" title="2.5 其他"></a>2.5 其他</h4><ul>
-<li><p><code>reverse(s.begin(), s.end())</code> 反转容器元素顺序，复杂度是线性的</p>
+<p>输出是<code>6 36</code></p>
+<h4 id="2-5-其他">2.5 其他</h4>
+<ul>
+<li>
+<p><code>reverse(s.begin(), s.end())</code> 反转容器元素顺序，复杂度是线性的</p>
 </li>
-<li><p><code>subs1  = s.substr(size_t start,size_t count = npos)</code> 获取 s 的子串，从 start 往后几个元素（后面的参数），return 一个 string 。下面是一个分割字符串的例子</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> dotPos = noZero.<span class="built_in">find</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">string prePart = (dotPos == std::string::npos) ? noZero : noZero.<span class="built_in">substr</span>(<span class="number">0</span>, dotPos);</span><br><span class="line">string endPart = (dotPos == std::string::npos) ? <span class="string">&quot;&quot;</span> : noZero.<span class="built_in">substr</span>(dotPos);</span><br></pre></td></tr></table></figure></li>
+<li>
+<p><code>subs1  = s.substr(size_t start,size_t count = npos)</code> 获取 s 的子串，从 start 往后几个元素（后面的参数），return 一个 string 。下面是一个分割字符串的例子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> dotPos = noZero.<span class="built_in">find</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">string prePart = (dotPos == std::string::npos) ? noZero : noZero.<span class="built_in">substr</span>(<span class="number">0</span>, dotPos);</span><br><span class="line">string endPart = (dotPos == std::string::npos) ? <span class="string">&quot;&quot;</span> : noZero.<span class="built_in">substr</span>(dotPos);</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <hr>
-<h3 id="3-数据结构有关的"><a href="#3-数据结构有关的" class="headerlink" title="3. 数据结构有关的"></a>3. 数据结构有关的</h3><h4 id="3-1-图的邻接矩阵和邻接表实现"><a href="#3-1-图的邻接矩阵和邻接表实现" class="headerlink" title="3.1 图的邻接矩阵和邻接表实现"></a>3.1 图的邻接矩阵和邻接表实现</h4><p>有一颗树或者图，它给定的边是<br><em><strong>1 2</strong></em><br><em><strong>1 3</strong></em><br><em><strong>2 4</strong></em><br><em><strong>3 5</strong></em></p>
+<h3 id="3-数据结构有关的">3. 数据结构有关的</h3>
+<h4 id="3-1-图的邻接矩阵和邻接表实现">3.1 图的邻接矩阵和邻接表实现</h4>
+<p>有一颗树或者图，它给定的边是<br>
+<em><strong>1 2</strong></em><br>
+<em><strong>1 3</strong></em><br>
+<em><strong>2 4</strong></em><br>
+<em><strong>3 5</strong></em></p>
 <p>邻接表表示是：</p>
-<p><em><strong>1: 2, 3</strong></em><br><em><strong>2: 1, 4</strong></em><br><em><strong>3: 1, 5</strong></em><br><em><strong>4: 2</strong></em><br><em><strong>5: 3</strong></em></p>
+<p><em><strong>1: 2, 3</strong></em><br>
+<em><strong>2: 1, 4</strong></em><br>
+<em><strong>3: 1, 5</strong></em><br>
+<em><strong>4: 2</strong></em><br>
+<em><strong>5: 3</strong></em></p>
 <p>如果想要用<strong>邻接表</strong>来存<strong>稀疏图</strong>，用C实现的话就要写一个<code>add(int a,int b)</code>来静态建图&amp;树，其实就是链式前向星。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> head[N],next[N * <span class="number">2</span>],e[N * <span class="number">2</span>],idx;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">	e[idx] = b,next[idx] = head[a],head[a] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">add</span>(a,b),<span class="built_in">add</span>(b,a);</span><br></pre></td></tr></table></figure>
-
 <p><code>C++</code>有了<code>vector</code>这个容器后，我们可以更优雅地建图&amp;树</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; graph[N];</span><br><span class="line">graph[a].<span class="built_in">push_back</span>(b) <span class="comment">// 邻接表的节点 a 的邻接链表中添加节点 b</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-2-栈和队列"><a href="#3-2-栈和队列" class="headerlink" title="3.2 栈和队列"></a>3.2 栈和队列</h4><blockquote>
+<h4 id="3-2-栈和队列">3.2 栈和队列</h4>
+<blockquote>
 <p><code>include &lt;stack&gt;</code></p>
 </blockquote>
 <p>栈是一个后进先出(LIFO)表</p>
@@ -142,48 +159,59 @@
 <li>出队 <code>q.pop()</code></li>
 <li>访问队首 <code>q.front()</code>，<code>q.back()</code></li>
 </ul>
-<h4 id="3-3-优先队列"><a href="#3-3-优先队列" class="headerlink" title="3.3 优先队列"></a>3.3 优先队列</h4><blockquote>
+<h4 id="3-3-优先队列">3.3 优先队列</h4>
+<blockquote>
 <p><code>include &lt;queue&gt;</code></p>
 </blockquote>
 <p>优先队列能用来实现堆</p>
 <ul>
-<li><p>构造</p>
+<li>
+<p>构造</p>
 <ul>
-<li><p><code>priority_queue&lt;int&gt; q</code> 默认是最大堆</p>
+<li>
+<p><code>priority_queue&lt;int&gt; q</code> 默认是最大堆</p>
 </li>
-<li><p><code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; q</code>最小堆</p>
+<li>
+<p><code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; q</code>最小堆</p>
 </li>
-<li><p>自定义比较函数，以下是一个最小堆堆例子：</p>
+<li>
+<p>自定义比较函数，以下是一个最小堆堆例子：</p>
 <p>存int类型，vector<int>是底层容器来存元素，</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> cmp = [](<span class="type">const</span> <span class="type">int</span> &amp;a,<span class="type">const</span> <span class="type">int</span> &amp;b) &#123;<span class="keyword">return</span> a &gt; b;&#125;;</span><br><span class="line">priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;,<span class="keyword">decltype</span>(cmp) &gt; <span class="built_in">q</span>(cmp);</span><br></pre></td></tr></table></figure>
-
 <p><code>decltype</code>和<code>auto</code>类似，但是<code>auto</code>是根据初始化表达式来推导类型，<code>decltype</code>是根据任意表达式推导类型，不依赖初始化</p>
 </li>
-<li><p>还可以用已有的数组初始化优先队列</p>
+<li>
+<p>还可以用已有的数组初始化优先队列</p>
 <ul>
-<li><code>priority_queue&lt;int&gt; q1(v.begin(),v.end());</code> </li>
+<li><code>priority_queue&lt;int&gt; q1(v.begin(),v.end());</code></li>
 <li><code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; q2(v.begin(), v.end());</code></li>
 <li><code>priority_queue&lt;int, vector&lt;int&gt;, decltype(cmp)&gt; q3(v.begin(), v.end(), cmp);</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>入队：<code>q.push(2)</code></p>
+<li>
+<p>入队：<code>q.push(2)</code></p>
 </li>
-<li><p>出队: <code>q.pop()</code></p>
+<li>
+<p>出队: <code>q.pop()</code></p>
 </li>
-<li><p>入队和出队的复杂度是$O(\log{N})$</p>
+<li>
+<p>入队和出队的复杂度是$O(\log{N})$</p>
 </li>
-<li><p>访问堆头元素 <code>q.top()</code></p>
+<li>
+<p>访问堆头元素 <code>q.top()</code></p>
 </li>
 </ul>
-<h4 id="3-4-set-map-multiset"><a href="#3-4-set-map-multiset" class="headerlink" title="3.4 set &amp; map &amp; multiset"></a>3.4 set &amp; map &amp; multiset</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::set <span class="comment">// 是唯一的，有序的集合，用红黑树实现 </span></span><br><span class="line">std::map <span class="comment">// 是键值对的集合，键唯一、有序，用红黑树实现</span></span><br><span class="line"><span class="comment">// 下面是他们的可以重复的版本</span></span><br><span class="line">std::multiset </span><br><span class="line">std::multimap</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-4-1-set-multiset"><a href="#3-4-1-set-multiset" class="headerlink" title="3.4.1 set &amp; multiset"></a>3.4.1 set &amp; multiset</h5><blockquote>
+<h4 id="3-4-set-map-multiset">3.4 set &amp; map &amp; multiset</h4>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::set <span class="comment">// 是唯一的，有序的集合，用红黑树实现 </span></span><br><span class="line">std::map <span class="comment">// 是键值对的集合，键唯一、有序，用红黑树实现</span></span><br><span class="line"><span class="comment">// 下面是他们的可以重复的版本</span></span><br><span class="line">std::multiset </span><br><span class="line">std::multimap</span><br></pre></td></tr></table></figure>
+<h5 id="3-4-1-set-multiset">3.4.1 set &amp; multiset</h5>
+<blockquote>
 <p><code>#include &lt;set&gt;</code></p>
 </blockquote>
 <ul>
-<li>构造：<code>set&lt;int&gt; s;</code>或者<code>mulitset&lt;set&gt; s;</code><ul>
+<li>构造：<code>set&lt;int&gt; s;</code>或者<code>mulitset&lt;set&gt; s;</code>
+<ul>
 <li>也可以类似priority_queue用数组等构造，复杂度是</li>
 </ul>
 </li>
@@ -193,11 +221,13 @@
 <li>查找：<code>s.find(2)</code>，返回一个值相等的元素的迭代器，没找到，返回<code>s.end()</code>复杂度是$O(logN)$的</li>
 <li>也有<code>s.lower_bound(2)</code>、<code>s.upper_bound(3)</code>函数。复杂度是$O(logN)$的</li>
 </ul>
-<h5 id="3-4-2-map"><a href="#3-4-2-map" class="headerlink" title="3.4.2 map"></a>3.4.2 map</h5><blockquote>
+<h5 id="3-4-2-map">3.4.2 map</h5>
+<blockquote>
 <p><code>#include &lt;map&gt;</code></p>
 </blockquote>
 <ul>
-<li>构造：<code>map&lt;int, string&gt; s;</code><ul>
+<li>构造：<code>map&lt;int, string&gt; s;</code>
+<ul>
 <li>支持数组构造和自定义比较函数</li>
 </ul>
 </li>
@@ -206,7 +236,8 @@
 <li>查找：<code>s.find(2)</code>，返回key相等的元素迭代器，如果没找到，返回<code>s.end()</code>，复杂度是$O(logN)$</li>
 <li>也有<code>s.lower_bound(2)</code>、<code>s.upper_bound(3)</code>函数。复杂度是$O(logN)$</li>
 </ul>
-<h4 id="3-5-unordered-set-unordered-map"><a href="#3-5-unordered-set-unordered-map" class="headerlink" title="3.5 unordered_set &amp; unordered_map"></a>3.5 unordered_set &amp; unordered_map</h4><blockquote>
+<h4 id="3-5-unordered-set-unordered-map">3.5 unordered_set &amp; unordered_map</h4>
+<blockquote>
 <p><code>#include&lt;unordered_set&gt;</code> <code>#include&lt;unordered_map&gt;</code></p>
 </blockquote>
 <p>成员函数与 set 和 map 类似，但是因为无序所以没有 <code>lower_bound</code> 和 <code>upper_bound</code> 。</p>
